@@ -9,8 +9,8 @@ module.exports = function(opts) {
 
     wg.generateWords(10, check)
     function check(err, words) {
-      if (err) throw err
-      console.log('Genereated:', words.join(' '))
+      if (err) { console.error(err); throw err }
+      console.log('Generated:', words.join(' '))
       
       t.equal(words.filter(function(word) { return !!word }).length, 10)
       n++
