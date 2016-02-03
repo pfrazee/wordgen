@@ -1,7 +1,7 @@
 {
   "name": "wordgen",
   "description": "a random word generator",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "homepage": "https://github.com/pfraze/wordgen",
   "repository": {
     "type": "git",
