@@ -1,4 +1,5 @@
 var fs = require('fs')
+var path = require('path')
 var crypto = require('crypto')
 
 const NWORDS = 970
@@ -6,7 +7,7 @@ var dict
 
 exports.generateWords = function(n, cb) {
   if (!dict) {
-    fs.readFile('./dict.txt', 'utf8', function(err, str) {
+    fs.readFile(path.resolve(__dirname, './dict.txt'), 'utf8', function(err, str) {
       if (err) return cb(err)
       dict = str.split('\n')
       if (dict.length !== NWORDS) return cb(new Error('Dictionary file should contain 970 words, but has '+dict.length))
